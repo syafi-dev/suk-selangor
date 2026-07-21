@@ -30,6 +30,11 @@ preview-pane screenshots).
       in BOTH schemes (regression: original `mt-10`+`gap-y-8`+4.6rem medallions
       overflowed, clipping the bottom row's captions). Fixed with
       `mt-6 gap-y-5` + `!w-14 !h-14` medallions + one-line captions. — 2026-07-21
+- [x] **Lab component (Lab 2 & Lab 4):** five-step labs must keep the caution
+      strip above the fixed footer (regression: original spacing overflowed and
+      the caution collided with the footer). Fixed by tightening medallion/goal/
+      step/terminal spacing + font in `Lab.vue`; verified Lab 2 & Lab 4 clear the
+      footer in BOTH schemes. — 2026-07-21
 - [x] No slide's content overlaps the fixed footer at final click state. — 2026-07-21
 
 ## Branding (client deliverable — no design-ref leakage)
