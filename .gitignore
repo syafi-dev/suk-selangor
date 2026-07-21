@@ -4,3 +4,8 @@ dist/
 *.log
 .DS_Store
 slice-check/
+check-dark/
+check-light/
+check31/
+sheet*.png
+slides.md.bak

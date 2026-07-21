@@ -1,0 +1,46 @@
+---
+layout: default
+transition: slide-left
+---
+
+<div class="flex items-center gap-3 mb-2">
+  <LiveBadge />
+  <h3 class="!m-0">Two minutes: are your tools ready?</h3>
+</div>
+
+<div class="grid grid-cols-2 gap-8 mt-5 items-start">
+
+<div class="term-print">
+<TermWindow title="run these now">
+<div v-click="1" class="opacity-50"># 1 · Git is installed</div>
+<div v-click="1"><span class="text-green-400">$</span> git --version</div>
+<div v-click="2" class="opacity-50"># 2 · You are identified</div>
+<div v-click="2"><span class="text-green-400">$</span> git config --global user.name "Your Name"</div>
+<div v-click="2"><span class="text-green-400">$</span> git config --global user.email "you@selangor.gov.my"</div>
+<div v-click="3" class="opacity-50"># 3 · You can reach GitLab</div>
+<div v-click="3"><span class="text-green-400">$</span> ssh -T git@git.selangor.gov.my</div>
+</TermWindow>
+</div>
+
+<div class="space-y-4">
+  <div v-click="1" class="note-row items-center"><mdi-check-circle class="note-ico text-green-600 dark:text-green-400" /><p><b>Git ≥ 2.30</b> · any recent version is fine</p></div>
+  <div v-click="2" class="note-row items-center"><mdi-check-circle class="note-ico text-green-600 dark:text-green-400" /><p><b>Name &amp; email set</b> · every commit is stamped with these</p></div>
+  <div v-click="3" class="note-row items-center"><mdi-check-circle class="note-ico text-green-600 dark:text-green-400" /><p><b>GitLab access</b> · SSH key added, or token ready</p></div>
+  <div v-click="4" class="note-row items-center"><mdi-alert-circle class="note-ico text-amber-600 dark:text-amber-400" /><p><b>Practice repo</b> · we clone it together in Lab 1</p></div>
+</div>
+
+</div>
+
+<div v-click="4" class="mt-6 text-center text-base opacity-80">
+If any line errors out, flag it now so you don't fall behind.
+</div>
+
+<!--
+- everyone runs these three now; the point is to catch a broken setup before Lab 1, not during it
+[click] version proves Git is installed; any recent version works
+[click] name and email get stamped on every commit; set them once, globally
+[click] the ssh line proves you can reach the GitLab server; a friendly greeting means yes
+[click] if a line errors, raise a hand; a neighbour or I will sort it in the next two minutes
+- gloss: "ssh -T" is a handshake with the server; it does not change anything, just checks the door opens
+- PREP night before: confirm git.selangor.gov.my is reachable from the training room network; have HTTPS-token fallback printed
+-->

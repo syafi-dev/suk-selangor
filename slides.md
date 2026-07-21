@@ -22,7 +22,39 @@ src: ./pages/title.md
 ---
 
 ---
+src: ./pages/agenda.md
+---
+
+---
+src: ./pages/how-it-flows.md
+---
+
+---
+src: ./pages/warm-up.md
+---
+
+---
+src: ./pages/setup-check.md
+---
+
+---
 src: ./pages/part1.md
+---
+
+---
+src: ./pages/what-is-git.md
+---
+
+---
+src: ./pages/four-places.md
+---
+
+---
+src: ./pages/everyday-cycle.md
+---
+
+---
+src: ./pages/commands-core.md
 ---
 
 ---
@@ -30,7 +62,115 @@ src: ./pages/lab1.md
 ---
 
 ---
+src: ./pages/lab2.md
+---
+
+---
+src: ./pages/pitfalls-basics.md
+---
+
+---
+src: ./pages/part2.md
+---
+
+---
 src: ./pages/branch-graph.md
+---
+
+---
+src: ./pages/merge-strategies.md
+---
+
+---
+src: ./pages/branch-commands.md
+---
+
+---
+src: ./pages/lab3.md
+---
+
+---
+src: ./pages/lab4.md
+---
+
+---
+src: ./pages/conflict-why.md
+---
+
+---
+src: ./pages/conflict-resolve.md
+---
+
+---
+src: ./pages/lab5.md
+---
+
+---
+src: ./pages/pitfalls-branches.md
+---
+
+---
+src: ./pages/part3.md
+---
+
+---
+src: ./pages/what-is-gitlab.md
+---
+
+---
+src: ./pages/remotes-origin.md
+---
+
+---
+src: ./pages/merge-request-flow.md
+---
+
+---
+src: ./pages/lab6.md
+---
+
+---
+src: ./pages/lab7.md
+---
+
+---
+src: ./pages/gitignore.md
+---
+
+---
+src: ./pages/best-practices.md
+---
+
+---
+src: ./pages/part4.md
+---
+
+---
+src: ./pages/undo-cheatsheet.md
+---
+
+---
+src: ./pages/recovery-classics.md
+---
+
+---
+src: ./pages/quick-fixes.md
+---
+
+---
+src: ./pages/lab8.md
+---
+
+---
+src: ./pages/cheatsheet.md
+---
+
+---
+src: ./pages/seven-habits.md
+---
+
+---
+src: ./pages/wrap-up.md
 ---
 
 ---

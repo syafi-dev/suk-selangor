@@ -1,0 +1,57 @@
+# TESTPLAN — SUK Selangor Git & GitLab deck
+
+Append-only checklist of scenarios that must keep passing. Verified via
+`pnpm build` and `pnpm exec slidev export --format png` (Playwright renders
+final-click state faithfully; the Claude Browser preview tab runs `hidden`, so
+RAF-driven `v-motion` freezes there — always verify with the PNG export, not
+preview-pane screenshots).
+
+## Build & structure
+
+- [x] `pnpm install` succeeds; `pnpm build` exits 0 (671 modules). — 2026-07-21
+- [x] `slides.md` imports 40 pages via `src:`; every page file exists. — 2026-07-21
+- [x] Build base is `/suk-selangor/`; all `dist/assets/*` reference that base. — 2026-07-21
+
+## Rendering — both color schemes
+
+- [x] Full deck exported to PNG (dark); all 40 slides render, no blank/broken. — 2026-07-21 (check-dark/)
+- [x] Light-scheme sample (1,7,8,15,27,31,35,40) renders: dark text on white,
+      diagrams switch to light palette, TermWindows stay dark, GUI mocks stay
+      light, footer legible. — 2026-07-21 (check-light/)
+- [x] Icons resolve: `mdi-*` and `logos-gitlab-icon` render (no empty boxes). — 2026-07-21
+- [x] GitGraph (branch-graph, merge-strategies) draws commits/wires/HEAD with
+      explicit English props (never the BM Docker defaults). — 2026-07-21
+- [x] FlowGraph (four-places, remotes-origin, merge-request-flow) draws nodes,
+      edges, and command labels with explicit props. — 2026-07-21
+
+## Layout regressions
+
+- [x] **best-practices (slide 31):** 6-medallion grid must fit above the footer
+      in BOTH schemes (regression: original `mt-10`+`gap-y-8`+4.6rem medallions
+      overflowed, clipping the bottom row's captions). Fixed with
+      `mt-6 gap-y-5` + `!w-14 !h-14` medallions + one-line captions. — 2026-07-21
+- [x] No slide's content overlaps the fixed footer at final click state. — 2026-07-21
+
+## Branding (client deliverable — no design-ref leakage)
+
+- [x] No "Infratify", "Inframesia", "NTW", "National Training", or trainer names
+      from the reference repo anywhere in shipped files (grep clean). — 2026-07-21
+- [x] Title/footer/closing carry only SUK Selangor + Syafiyullah Yahya
+      (MBOT Professional Technologist, github.com/syafi-dev, linkedin.com/in/syafi). — 2026-07-21
+- [x] FlowGraph/GitGraph component defaults contain no Bahasa Malaysia strings. — 2026-07-21
+
+## Deploy
+
+- [x] GitHub Actions workflow builds and publishes to Pages (no ntw `lint:decks`
+      step; single-deck build). — 2026-07-21
+- [x] Live at https://syafi-dev.github.io/suk-selangor/ — HTTP 200, correct
+      `<title>`, assets on `/suk-selangor/` base, logo + icons load. — 2026-07-21
+
+## Content fidelity
+
+- [x] All 4 parts present with 8 labs (Lab 1–8), pitfalls, recovery clinic,
+      cheat sheet, seven habits, pre/post-assessment + feedback links. — 2026-07-21
+- [x] Enriched with Mastering concept slides: what-is-git, merge-strategies
+      (fast-forward vs 3-way), what-is-gitlab (self-hosted vs SaaS). — 2026-07-21
+- [x] Source URLs preserved: ml.my/git-gitlab-slide, pre/post questionnaires,
+      feedback form, git.selangor.gov.my practice repo. — 2026-07-21
